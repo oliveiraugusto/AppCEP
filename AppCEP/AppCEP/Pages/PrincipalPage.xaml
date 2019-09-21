@@ -12,15 +12,32 @@
                    Margin="10"
                    MaxLength="8"
                    TextColor="White"
+                   FontSize="Large"
                    HorizontalTextAlignment="Center"
                    Placeholder="Digite o CEP"
                    Keyboard="Numeric"/>
-            <Button Text="Buscar" 
-                    x:Name="buttonBuscarCEP" 
-                    Clicked="ButtonBuscarCEP_Clicked"
-                    BackgroundColor="#1D23AD"
-                    Margin="10"
-                    TextColor="White"/>
+            
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Limpar" 
+                        x:Name="buttonLimpar"
+                        Clicked="ButtonLimpar_Clicked"
+                        BackgroundColor="#1D23AD"
+                        Margin="10,0,0,0"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="White"/>
+                
+                <Button Text="Buscar" 
+                        x:Name="buttonBuscarCEP" 
+                        Clicked="ButtonBuscarCEP_Clicked"
+                        BackgroundColor="#1D23AD"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,10,0"
+                        TextColor="White"/>
+            </StackLayout>
+            
+            <Label x:Name="labelResultado"
+                   HorizontalOptions="Start"
+                   TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

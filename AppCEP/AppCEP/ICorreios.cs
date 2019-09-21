@@ -7,6 +7,6 @@ namespace AppCEP
 {
     public interface ICorreios
     {
-        object BuscaCEP(string cep);
+        void BuscaCEP(string cep);
     }
 }

@@ -22,16 +22,17 @@ namespace AppCEP.Pages
         private void ButtonBuscarCEP_Clicked(object sender, EventArgs e)
         {
             var servico = DependencyService.Get<ICorreios>();
-            var resposta = servico.BuscaCEP(entryCEP.Text);
+            servico.BuscaCEP(entryCEP.Text);
 
-            Label labelResultado = new Label
-            {
-                Text = string.Format("{0}", resposta.ToString())
-            };
-            StackLayout stackLayout = new StackLayout();
-            stackLayout.Children.Add(labelResultado);
-            Content = stackLayout;
+            labelResultado.Text = string.Format("Endereço: {0}\nBairro: {1}\nCidade: {2}\nUF: {3}",
+                                                            CEP.end, CEP.bairro, CEP.cidade, CEP.uf);
+        }
 
+        private void ButtonLimpar_Clicked(object sender, EventArgs e)
+        {
+            labelResultado.Text = "";
+            entryCEP.Text = "";
+            entryCEP.Focus();
         }
     }
 }
