@@ -18,17 +18,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Pages\PrincipalPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
     <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Connected Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Pages\SoapPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

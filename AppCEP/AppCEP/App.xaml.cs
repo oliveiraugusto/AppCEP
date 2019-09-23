@@ -11,7 +11,7 @@ namespace AppCEP
         {
             InitializeComponent();
 
-            MainPage = new Pages.PrincipalPage();
+            MainPage = new Pages.SoapPage();
         }
 
         protected override void OnStart()
