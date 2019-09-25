@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using AppCEP.Interfaces;
+using AppCEP.Class;
+
 namespace AppCEP.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -17,26 +20,29 @@ namespace AppCEP.Pages
 			InitializeComponent ();
 		}
 
-        protected virtual void OnAppaeatring()
+        private void ButtonBuscarCEPSoap_Clicked(object sender, EventArgs e)
         {
-            entryBuscar.Focus();
+            if(!string.IsNullOrEmpty(entryBuscarCEPSoap.Text))
+            {
+                var servico = DependencyService.Get<ICorreios>();
+                servico.BuscaCEP(entryBuscarCEPSoap.Text);
+
+                labelResultadoSoap.Text = string.Format("Endereço: {0}\n" +
+                                                        "Bairro: {1}\n" +
+                                                        "Cidade: {2}\n" +
+                                                        "UF: {3}",
+                                                        XmlCEP.end,
+                                                        XmlCEP.bairro,
+                                                        XmlCEP.cidade,
+                                                        XmlCEP.uf);
+            }
+            else
+            {
+                DisplayAlert("Ops...", "Não deixe os campos em branco", "OK");
+            }
         }
 
-        private void ButtonBuscar_Clicked(object sender, EventArgs e)
-        {
-            var servico = DependencyService.Get<ICorreios>();
-
-            servico.BuscaCEP(entryBuscar.Text);
-
-
-            labelResultado.Text = string.Format("Endereço: {0}\nBairro: {1}\nCidade: {2}\nUF: {3}",
-                                                            Class.CEP.end,
-                                                            Class.CEP.bairro,
-                                                            Class.CEP.cidade,
-                                                            Class.CEP.uf);
-        }
-
-        private void ButtonLimpar_Clicked(object sender, EventArgs e)
+        private void ButtonLimparSoap_Clicked(object sender, EventArgs e)
         {
 
         }

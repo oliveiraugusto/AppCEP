@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppCEP.Class
 {
-    public static class CEP
+    public static class XmlCEP
     {
         public static string bairro { get; set; }
         public static string cep { get; set; }
