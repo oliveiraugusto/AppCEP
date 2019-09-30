@@ -16,7 +16,7 @@ namespace AppCEP.Pages
 		{
 			InitializeComponent ();
             Detail = new NavigationPage(new PrincipalPage());
-		}
+        }
 
         private void AdministradorPage_Tapped(object sender, EventArgs e)
         {

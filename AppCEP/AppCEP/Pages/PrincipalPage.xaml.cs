@@ -15,7 +15,7 @@ namespace AppCEP.Pages
 		public PrincipalPage ()
 		{
 			InitializeComponent ();
-		}
+        }
 
         private void ButtonSoapPage_Clicked(object sender, EventArgs e)
         {

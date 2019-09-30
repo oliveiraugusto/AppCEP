@@ -6,8 +6,8 @@
   <item
     android:layout_gravity="center">
     <bitmap android:src="@drawable/logo"
-            android:layout_width="230dp"
-            android:layout_height="70dp"
+            android:layout_width="230px"
+            android:layout_height="70px"
             android:tileMode="disabled"/>
   </item>
 </layer-list>
