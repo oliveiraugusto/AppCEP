@@ -11,7 +11,7 @@ namespace AppCEP
         {
             InitializeComponent();
 
-            //MainPage = new Pages.NugetPage3();
+            MainPage = new Pages.MenuPage();
         }
 
         protected override void OnStart()

@@ -7,8 +7,13 @@
         <StackLayout>
             <Image Source="logo"
                    Margin="5,10,5,10"/>
+            <Label Text="(Essa busca será realizada utilizando a API REST da ViaCep)"
+                   FontSize="Micro"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"/>
             <Entry Placeholder="Digite um CEP"
                    HorizontalTextAlignment="Center"
+                   Keyboard="Numeric"
                    x:Name="entryBuscarCEPRest"
                    Margin="5,5"/>
             <StackLayout Orientation="Horizontal">
@@ -16,6 +21,7 @@
                         HorizontalOptions="FillAndExpand"
                         x:Name="buttonBuscarCEPRest"
                         BackgroundColor="#20567c"
+                        TextColor="White"
                         BorderRadius="8"
                         Margin="5,5"
                         Clicked="ButtonBuscarCEPRest_Clicked"/>
@@ -24,6 +30,7 @@
                         HorizontalOptions="FillAndExpand"
                         x:Name="buttonLimparRest"
                         BackgroundColor="#20567c"
+                        TextColor="White"
                         BorderRadius="8"
                         Margin="5,5"
                         Clicked="ButtonLimparRest_Clicked"/>

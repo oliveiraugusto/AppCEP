@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCEP.Pages.PrincipalPage"
+             BackgroundImage="background">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="logo"
+                   Margin="5,10,5,10"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Soap"
+                        HorizontalOptions="FillAndExpand"
+                        x:Name="buttonSoapPage"
+                        BackgroundColor="#20567c"
+                        TextColor="White"
+                        BorderRadius="8"
+                        Margin="5,5"
+                        Clicked="ButtonSoapPage_Clicked"/>
+
+                <Button Text="Rest"
+                        HorizontalOptions="FillAndExpand"
+                        x:Name="buttonRestPage"
+                        TextColor="White"
+                        BackgroundColor="#20567c"
+                        BorderRadius="8"
+                        Margin="5,5"
+                        Clicked="ButtonRestPage_Clicked"/>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Nuget (1)"
+                        HorizontalOptions="FillAndExpand"
+                        x:Name="buttonNugetPage1"
+                        TextColor="White"
+                        BackgroundColor="#20567c"
+                        BorderRadius="8"
+                        Margin="5,5"
+                        Clicked="ButtonNugetPage1_Clicked"/>
+
+                <Button Text="Nuget (2)"
+                        HorizontalOptions="FillAndExpand"
+                        x:Name="buttonNugetPage2"
+                        BackgroundColor="#20567c"
+                        TextColor="White"
+                        BorderRadius="8"
+                        Margin="5,5"
+                        Clicked="ButtonNugetPage2_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

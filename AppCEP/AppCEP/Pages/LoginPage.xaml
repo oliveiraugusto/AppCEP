@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCEP.Pages.LoginPage"
+             BackgroundImage="background">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="logo"
+                   Margin="5,10,5,10"/>
+            <Label Text="Autentique-se para Entrar"
+                   HorizontalTextAlignment="Center"
+                   FontSize="20"
+                   TextColor="White"/>
+            <Entry Placeholder="usuario"
+                   HorizontalTextAlignment="Center"
+                   x:Name="entryLogin"
+                   Margin="5,5"
+                   TextColor="White"/>
+            <Entry Placeholder="******"
+                   HorizontalTextAlignment="Center"
+                   IsPassword="True"
+                   x:Name="entrySenha"
+                   Margin="5,5"
+                   TextColor="White"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Limpar"
+                        HorizontalOptions="FillAndExpand"
+                        x:Name="buttonLimparLogin"
+                        BackgroundColor="#20567c"
+                        BorderRadius="8"
+                        Margin="5,5"/>
+                <Button Text="Entrar"
+                        HorizontalOptions="FillAndExpand"
+                        TextColor="White"
+                        x:Name="buttonEntrarLogin"
+                        BackgroundColor="#20567c"
+                        BorderRadius="8"
+                        Margin="5,5"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

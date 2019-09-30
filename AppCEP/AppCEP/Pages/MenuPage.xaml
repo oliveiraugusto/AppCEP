@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCEP.Pages.MenuPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" Padding="0">
+            <ContentPage.Content>
+                <StackLayout BackgroundColor="#245F8A">
+
+                    <TableView Intent="Menu"
+                               BackgroundColor="#245F8A">
+                        <TableSection>
+                            <ViewCell x:Name="PrincipalPage"
+                                      Tapped="PrincipalPage_Tapped">
+                                <StackLayout Padding="10,15">
+                                    <Label Text="Inicio"
+                                           TextColor="White"
+                                           HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell x:Name="AdministradorPage"
+                                      Tapped="AdministradorPage_Tapped">
+                                <StackLayout Padding="10,15">
+                                    <Label Text="Administrador"
+                                           TextColor="White"
+                                           HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell x:Name="FaleConoscoPage"
+                                      Tapped="FaleConoscoPage_Tapped">
+                                <StackLayout Padding="10,15">
+                                    <Label Text="Fale Conosco"
+                                           TextColor="White"
+                                           HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell x:Name="SobrePage"
+                                      Tapped="SobrePage_Tapped">
+                                <StackLayout Padding="10,15">
+                                    <Label Text="Sobre"
+                                           TextColor="White"
+                                           HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                    </TableView>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

@@ -1,34 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppCEP.Pages.NugetPage1"
+             x:Class="AppCEP.Pages.NugetPage2"
              BackgroundImage="background">
     <ContentPage.Content>
         <StackLayout>
             <Image Source="logo"
                    Margin="5,10,5,10"/>
+            <Label Text="(Essa busca será realizada utilizando o pacote NuGet CanducciCep)"
+                   FontSize="Micro"
+                   HorizontalTextAlignment="Center"/>
             <Entry Placeholder="Digite um CEP"
                    HorizontalTextAlignment="Center"
-                   x:Name="entryBuscarCEPNuget1"
+                   Keyboard="Numeric"
+                   x:Name="entryBuscarCEPNuget2"
                    Margin="5,5"/>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Buscar CEP"
                         HorizontalOptions="FillAndExpand"
-                        x:Name="buttonBuscarCEPNuget1"
+                        x:Name="buttonBuscarCEPNuget2"
                         BackgroundColor="#20567c"
+                        TextColor="White"
                         BorderRadius="8"
                         Margin="5,5"
-                        Clicked="ButtonBuscarCEPNuget1_Clicked"/>
+                        Clicked="ButtonBuscarCEPNuget2_Clicked"/>
 
                 <Button Text="Limpar"
                         HorizontalOptions="FillAndExpand"
-                        x:Name="buttonLimparNuget1"
+                        x:Name="buttonLimparNuget2"
+                        TextColor="White"
                         BackgroundColor="#20567c"
                         BorderRadius="8"
-                        Margin="5,5"
-                        Clicked="ButtonLimparNuget1_Clicked"/>
+                        Margin="5,5"/>
             </StackLayout>
-            <Label x:Name="labelResultadoNuget1"
+            <Label x:Name="labelResultadoNuget2"
                    TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
